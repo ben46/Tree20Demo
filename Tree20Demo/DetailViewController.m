@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Three20/Three20.h"
 
 @interface DetailViewController ()
 - (void)configureView;
