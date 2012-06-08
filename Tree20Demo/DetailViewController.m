@@ -53,6 +53,29 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+
+-(void)addStyledLabel{
+    
+    NSString* kText = @"\
+    This is a test of styled labels.  Styled labels support \
+    <b>bold text</b>, <i>italic text</i>, <span class=\"blueText\">colored text</span>, \
+    <span class=\"largeText\">font sizes</span>, \
+    <span class=\"blueBox\">spans with backgrounds</span>, inline images \
+    <img src=\"bundle://smiley.png\"/>, and <a href=\"http://www.google.com\">hyperlinks</a> you can \
+    actually touch. URLs are automatically converted into links, like this: http://www.foo.com\
+    <div>You can enclose blocks within an HTML div.</div>\
+    Both line break characters\n\nand HTML line breaks<br/>are respected.";
+    
+    TTStyledTextLabel* label1 = [[[TTStyledTextLabel alloc] initWithFrame:self.view.bounds] autorelease];
+    label1.font = [UIFont systemFontOfSize:17];
+    TTStyledText * tmpText = [TTStyledText textFromXHTML:kText lineBreaks:NO URLs:YES];
+    label1.text = tmpText;
+    label1.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    
+    [self.view addSubview: label1];
+    
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -60,13 +83,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    [self addStyledLabel];
+
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -103,5 +127,8 @@
     }
     return self;
 }
+
+
+
 							
 @end
