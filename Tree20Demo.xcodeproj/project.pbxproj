@@ -26,6 +26,7 @@
 		314AB5251581C0D200447DDC /* libThree20UINavigator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 314AB51C1581C09F00447DDC /* libThree20UINavigator.a */; };
 		314AB5431581C19D00447DDC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314AB5421581C19D00447DDC /* QuartzCore.framework */; };
 		314AB5451581C1DD00447DDC /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 314AB5441581C1DD00447DDC /* Three20.bundle */; };
+		314AB72C1581DB1A00447DDC /* StyledTextTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 314AB72B1581DB1A00447DDC /* StyledTextTestController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +254,8 @@
 		314AB4EE1581C09F00447DDC /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = Three20/src/Three20/../Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
 		314AB5421581C19D00447DDC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		314AB5441581C1DD00447DDC /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = Three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
+		314AB72A1581DB1A00447DDC /* StyledTextTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledTextTestController.h; sourceTree = "<group>"; };
+		314AB72B1581DB1A00447DDC /* StyledTextTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledTextTestController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,21 +313,23 @@
 			children = (
 				314AB45A1581A0DF00447DDC /* AppDelegate.h */,
 				314AB45B1581A0DF00447DDC /* AppDelegate.m */,
-				314AB45D1581A0DF00447DDC /* MasterViewController.h */,
-				314AB45E1581A0DF00447DDC /* MasterViewController.m */,
 				314AB4601581A0DF00447DDC /* DetailViewController.h */,
 				314AB4611581A0DF00447DDC /* DetailViewController.m */,
-				314AB4631581A0DF00447DDC /* MasterViewController.xib */,
 				314AB4661581A0DF00447DDC /* DetailViewController.xib */,
+				314AB45D1581A0DF00447DDC /* MasterViewController.h */,
+				314AB45E1581A0DF00447DDC /* MasterViewController.m */,
+				314AB4631581A0DF00447DDC /* MasterViewController.xib */,
+				314AB72A1581DB1A00447DDC /* StyledTextTestController.h */,
+				314AB72B1581DB1A00447DDC /* StyledTextTestController.m */,
+				314AB4521581A0DF00447DDC /* Supporting Files */,
 				314AB5441581C1DD00447DDC /* Three20.bundle */,
+				314AB4B81581C05C00447DDC /* Three20.xcodeproj */,
 				314AB4E91581C09F00447DDC /* Three20Core.xcodeproj */,
 				314AB4EA1581C09F00447DDC /* Three20Network.xcodeproj */,
 				314AB4EB1581C09F00447DDC /* Three20Style.xcodeproj */,
+				314AB4EE1581C09F00447DDC /* Three20UI.xcodeproj */,
 				314AB4EC1581C09F00447DDC /* Three20UICommon.xcodeproj */,
 				314AB4ED1581C09F00447DDC /* Three20UINavigator.xcodeproj */,
-				314AB4EE1581C09F00447DDC /* Three20UI.xcodeproj */,
-				314AB4B81581C05C00447DDC /* Three20.xcodeproj */,
-				314AB4521581A0DF00447DDC /* Supporting Files */,
 			);
 			path = Tree20Demo;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 				314AB45C1581A0DF00447DDC /* AppDelegate.m in Sources */,
 				314AB45F1581A0DF00447DDC /* MasterViewController.m in Sources */,
 				314AB4621581A0DF00447DDC /* DetailViewController.m in Sources */,
+				314AB72C1581DB1A00447DDC /* StyledTextTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

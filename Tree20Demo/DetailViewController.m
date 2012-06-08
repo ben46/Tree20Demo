@@ -53,8 +53,8 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-
--(void)addStyledLabel{
+-(void) loadView{
+    [super loadView];
     
     NSString* kText = @"\
     This is a test of styled labels.  Styled labels support \
@@ -68,7 +68,7 @@
     
     TTStyledTextLabel* label1 = [[[TTStyledTextLabel alloc] initWithFrame:self.view.bounds] autorelease];
     label1.font = [UIFont systemFontOfSize:17];
-    TTStyledText * tmpText = [TTStyledText textFromXHTML:kText lineBreaks:NO URLs:YES];
+    TTStyledText * tmpText = [TTStyledText textFromXHTML:kText lineBreaks:YES URLs:YES];
     label1.text = tmpText;
     label1.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
@@ -84,7 +84,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     
-    [self addStyledLabel];
+
 
 }
 

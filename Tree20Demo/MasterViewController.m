@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "StyledTextTestController.h"
 
 @implementation MasterViewController
 
@@ -143,10 +144,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.detailViewController) {
-        self.detailViewController = [[[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil] autorelease];
+    
+    if (indexPath.row == 0) {
+        if (!self.detailViewController) {
+            self.detailViewController = [[[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil] autorelease];
+        }
+        [self.navigationController pushViewController:self.detailViewController animated:YES];
+
+        
     }
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
-}
+    if (indexPath.row == 1) {
+        StyledTextTestController * vc = [[[StyledTextTestController alloc]init]autorelease];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+
+  }
 
 @end
